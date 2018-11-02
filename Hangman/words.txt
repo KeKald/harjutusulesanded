@@ -1,0 +1,10 @@
+word
+rod
+plane
+dog
+flight
+banana
+fruit
+android
+linux
+window
