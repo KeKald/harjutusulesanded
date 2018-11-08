@@ -97,4 +97,3 @@ while True:
     bit_to_word()
     word_to_bit()
 
-
