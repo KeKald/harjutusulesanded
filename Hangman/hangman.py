@@ -85,10 +85,11 @@ def init_word_list():
 # Telling how good guess player had
 
 
-def feedback_to_user():
+def feedback_to_player():
     global bit_word
     global user_offer
     global lives
+    global plain_word
 
     guess = False
 
@@ -159,10 +160,15 @@ while True:
             print("\nYou have entered a number!")
             user_offer = input("Please enter a letter: ")
 
+        if len(user_offer) > 1:
+
+            print("Please enter only one letter!")
+            user_offer = input("Please enter a letter again: ")
+
         word_to_bit()
         bit_check()
         bit_to_word()
-        feedback_to_user()
+        feedback_to_player()
         word_to_bit()
 
         if lives == 0:
