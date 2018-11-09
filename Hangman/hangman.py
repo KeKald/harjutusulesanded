@@ -157,6 +157,7 @@ def one_letter_input_check():
         return True
     return False
 
+
 game_state = 0
 
 while True:
