@@ -139,33 +139,31 @@ def letter_duplicate_check():
     global user_offer
 
     for sequence in range(len(bit_word)):
-
         if user_offer == bit_word[sequence]:
-
             return True
+    return False
 
 
 def input_number_check():
     global user_offer
-
-    if user_offer.isdigit():
-
+    if user_offer.isdigit() == True:
         return True
+    return False
 
 
 def one_letter_input_check():
     global user_offer
-
     if len(user_offer) > 1:
-
         return True
-
+    return False
 
 game_state = 0
 
 while True:
     # Introduction and explanation for a player
     if game_state == 0:
+
+        lives = 3
 
         print("Welcome to the hangman game!"
               "\n"
@@ -177,15 +175,13 @@ while True:
               "\n"
               "If you offer a wrong letter, you will lose one life."
               "\n\n"
-              "In total you have 3 lives."
+              "In total you have {} lives."
               "\n\n"
-              "------------------------------------------------------")
+              "------------------------------------------------------".format(lives))
         game_state = 1
 
     # Initializing first variables and choosing a random word
     if game_state == 1:
-
-        lives = 3
 
         plain_word = choice(plain_words_list)
         init_word_list()
@@ -222,6 +218,7 @@ while True:
                 print("\nYou have entered more than 1 character!")
 
             if duplicate == False and number == False and over_one == False:
+
                 break
 
     word_to_bit()
