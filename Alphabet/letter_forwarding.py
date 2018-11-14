@@ -25,7 +25,7 @@ def one_letter_forward(input, alphabet):
 
 while True:
 
-    user_input = input("Please enter a random word: ").lower()
+    user_input = input("\nPlease enter a random word: ").lower()
 
     correct_input = input_control()
 
@@ -40,4 +40,4 @@ while True:
 alphabet = list(string.ascii_lowercase)
 
 result = one_letter_forward(user_input, alphabet)
-print(result)
+print("\nThis is a result when you but each letter one letter forward: ", result)
