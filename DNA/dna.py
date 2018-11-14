@@ -5,9 +5,9 @@ def dna_check(input):
 
     global dna_char
 
-    for char in range(len(input)):
+    for char in input:
 
-        if input[char] in dna_char:
+        if char in dna_char:
 
             return True
 
