@@ -11,6 +11,7 @@ def input_control():
 
     return True
 
+
 def one_letter_forward(input, alphabet):
 
     for char in range(len(input)):
